@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Ball {
-    private Colors color;
+    private Color color;
     private int number;
 
-    public Ball(Colors color, int number) {
+    public Ball(Color color, int number) {
         setColor(color);
         setNumber(number);
     }
@@ -16,15 +16,16 @@ public class Ball {
     public void setNumber(int number) {
         if (number > 100) {
             System.out.println("number should not be more than 100");
+            return;
         }
         this.number = number;
     }
 
-    public Colors getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(Colors color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -33,7 +34,7 @@ public class Ball {
         return new StringBuilder("Ball with number of ")
                 .append(number)
                 .append(" and ")
-                .append(color)
+                .append(color.name())
                 .append(" color")
                 .toString();
     }
