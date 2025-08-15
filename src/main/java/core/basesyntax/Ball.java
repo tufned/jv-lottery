@@ -4,8 +4,6 @@ public class Ball {
     private Colors color;
     private int number;
 
-    public Ball() {}
-
     public Ball(Colors color, int number) {
         setColor(color);
         setNumber(number);
